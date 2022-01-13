@@ -4,6 +4,7 @@ import "./App.css";
 function App() {
   const loco = "Cambio desde Ryzen 7";
   const otro = "Otro cambio desde el instituto";
+  const tercero = "El tercer cambio desde el instituto";
 
   return (
     <div className="App">
@@ -11,6 +12,9 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload {loco} - {otro}.
+        </p>
+        <p>
+          Mensaje de {tercero}.
         </p>
         <a
           className="App-link"
