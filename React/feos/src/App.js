@@ -1,5 +1,8 @@
-import logo from "./logo.svg";
 import "./App.css";
+import PrimerComponente from "./Componentes/PrimerComponente";
+import Peliculas from "./Componentes/Peliculas";
+import ConsumirAPI from "./Componentes/ConsumirAPI";
+import Cargando from "./Componentes/Cargando";
 
 function App() {
   const loco = "Cambio desde Ryzen 7";
@@ -7,20 +10,13 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload {loco} - {otro}.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PrimerComponente nombre="Feo">
+        <p>Desde el childrens del componente</p>
+        {/* Lo contenido en la etiqueta es props.children */}
+      </PrimerComponente>
+      <PrimerComponente nombre="Horrible" />
+      <Cargando texto="Cargando datos..." />
+      <ConsumirAPI />
     </div>
   );
 }
