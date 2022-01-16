@@ -7,6 +7,7 @@ import Cargando from "./Componentes/Cargando";
 function App() {
   const loco = "Cambio desde Ryzen 7";
   const otro = "Otro cambio desde el instituto";
+  const tercero = "El tercer cambio desde el instituto";
 
   return (
     <div className="App">
