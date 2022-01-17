@@ -28,7 +28,7 @@ const ConsumirAPI = (props) => {
   return (
     <React.Fragment>
       <h1>Películas de Star Wars</h1>
-      <p>
+      <div>
         {!peliculas ? (
           <Cargando texto="Cargando datos..." />
         ) : (
@@ -45,7 +45,7 @@ const ConsumirAPI = (props) => {
             );
           })
         )}
-      </p>
+      </div>
     </React.Fragment>
   );
 };
