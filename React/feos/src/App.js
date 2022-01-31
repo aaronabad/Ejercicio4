@@ -5,6 +5,8 @@ import ConsumirAPI from "./Componentes/ConsumirAPI";
 import Cargando from "./Componentes/Cargando";
 import Reloj from "./Componentes/Reloj";
 import Contador from "./Componentes/Contador";
+import Eventos from "./Componentes/Eventos";
+import ConsumirFirebase from "./Componentes/ConsumirFirebase";
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
       <Cargando texto="Cargando datos..." />
       <Reloj />
       <ConsumirAPI />
+      <Eventos />
     </div>
   );
 }
