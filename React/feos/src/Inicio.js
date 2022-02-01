@@ -6,6 +6,7 @@ import Izquierda from "./Componentes/Esquema/Izquierda";
 import Cabecera from "./Componentes/Esquema/Cabecera";
 import Pie from "./Componentes/Esquema/Pie";
 import Eventos from "./Componentes/Eventos";
+import EventosII from "./Componentes/EventosII";
 
 function Inicio() {
   return (
@@ -15,6 +16,7 @@ function Inicio() {
         <Contenedor>
           <Izquierda>
             <Eventos />
+            <EventosII />
           </Izquierda>
           <Derecha>Esto es derecha</Derecha>
         </Contenedor>
