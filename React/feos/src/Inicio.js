@@ -7,6 +7,7 @@ import Cabecera from "./Componentes/Esquema/Cabecera";
 import Pie from "./Componentes/Esquema/Pie";
 import Eventos from "./Componentes/Eventos";
 import EventosII from "./Componentes/EventosII";
+import Consultar from "./Componentes/Firebase/Consultar";
 
 function Inicio() {
   return (
@@ -15,13 +16,14 @@ function Inicio() {
         <Cabecera>Esto es la cabecera</Cabecera>
         <Contenedor>
           <Izquierda>
-            <Eventos />
-            <EventosII />
+         
           </Izquierda>
-          <Derecha>Esto es derecha</Derecha>
+          <Derecha>
+            <Consultar />
+          </Derecha>
         </Contenedor>
         <Pie>
-          <Eventos />
+  
         </Pie>
       </div>
     </React.Fragment>
