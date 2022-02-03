@@ -7,7 +7,7 @@ const Feo = (props) => {
         <h3>
           {props.nombre} {props.apellidos}
         </h3>
-        {/* . */}
+        {/* Aficiones en un array. */}
         <p className="feoAficiones">Sus aficiones son: {props.aficiones}</p>
         {/* Si props.vicios no es null, vacío o undefined; imprimo el segundo párrafo (vicios es un objeto). */}
         {props.vicios && (
