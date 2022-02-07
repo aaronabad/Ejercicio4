@@ -36,7 +36,6 @@ const Consultar = () => {
               aficiones={d.data().aficiones}
               vicios={d.data().vicios}
             />
-            //<p>{d.data().vicios ? ninguno : d.data().vicios}</p>
           );
         })}
     </React.Fragment>

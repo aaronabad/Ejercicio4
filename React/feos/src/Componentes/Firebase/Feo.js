@@ -1,4 +1,5 @@
-import React from "react";
+import React, { PureComponent } from "react";
+import Eliminar from "./Eliminar";
 
 const Feo = (props) => {
   return (
@@ -16,6 +17,9 @@ const Feo = (props) => {
             {props.vicios.tercero}
           </p>
         )}
+        <p>
+          <Eliminar id={props.id} />
+        </p>
       </div>
     </React.Fragment>
   );

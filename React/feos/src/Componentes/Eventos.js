@@ -9,6 +9,7 @@ function Eventos(props) {
 
   return (
     <React.Fragment>
+      {/* onClick espera una función. Si es necesario usar parámetros hay que pasarle uns función flecha.*/}
       <button onClick={ocultar}>Ocultar</button>
       <div className="texto">Este texto será ocultado al pulsar el botón.</div>
     </React.Fragment>

@@ -9,7 +9,13 @@ function EventosII(props) {
 
   return (
     <React.Fragment>
-      <button onClick={anadir}>Añadir</button>
+      <button
+        onClick={(e) => {
+          anadir(e);
+        }}
+      >
+        Añadir
+      </button>
       <div className="texto">Aquí se añadirá contenido.</div>
     </React.Fragment>
   );
