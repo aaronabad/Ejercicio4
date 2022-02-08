@@ -9,6 +9,8 @@ import Eventos from "./Componentes/Eventos";
 import EventosII from "./Componentes/EventosII";
 import Consultar from "./Componentes/Firebase/Consultar";
 import Formulario from "./Componentes/Firebase/Formulario";
+import Insertar from "./Componentes/Firebase/Insertar";
+import Actualizar from "./Componentes/Firebase/Actualizar";
 
 function Inicio() {
   /*
@@ -25,15 +27,11 @@ function Inicio() {
         <Contenedor>
           <Izquierda>
             <Eventos />
-            <Formulario
-              modo="nuevo"
-              funcion={() => {
-                hola("Feo");
-              }}
-            />
+            <Insertar />
           </Izquierda>
           <Derecha>
             <Consultar />
+            <Actualizar id="HdrgDS5bqxW4uALB1N7G" />
           </Derecha>
         </Contenedor>
         <Pie>

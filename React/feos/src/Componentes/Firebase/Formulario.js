@@ -54,9 +54,12 @@ const Formulario = (props) => {
             value={props.tercero && props.tercero}
           />
           <br />
-          <button id="boton" onClick={props.funcion}>
-            {props.modo == "editar" ? "Editar" : "Crear nuevo"}
-          </button>
+          <input
+            type="button"
+            id="boton"
+            onClick={props.funcion}
+            value={props.modo == "editar" ? "Editar" : "Crear nuevo"}
+          />
         </form>
       </div>
     </React.Fragment>
