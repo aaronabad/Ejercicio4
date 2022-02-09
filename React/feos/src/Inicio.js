@@ -11,6 +11,7 @@ import Consultar from "./Componentes/Firebase/Consultar";
 import Formulario from "./Componentes/Firebase/Formulario";
 import Insertar from "./Componentes/Firebase/Insertar";
 import Actualizar from "./Componentes/Firebase/Actualizar";
+import Menu from "./Componentes/Menu";
 
 function Inicio() {
   /*
@@ -28,10 +29,10 @@ function Inicio() {
           <Izquierda>
             <Eventos />
             <Insertar />
+            <Menu />
           </Izquierda>
           <Derecha>
             <Consultar />
-            <Actualizar id="HdrgDS5bqxW4uALB1N7G" />
           </Derecha>
         </Contenedor>
         <Pie>
