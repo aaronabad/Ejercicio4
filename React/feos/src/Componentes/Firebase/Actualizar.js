@@ -14,36 +14,40 @@ import {
 import Formulario from "./Formulario";
 
 const Actualizar = (props) => {
-  const [feos, setFeos] = useState(null);
+  const [feo, setFeo] = useState(null);
 
-  //const actualizarFeo = async () => {};
-
+  const actualizarFeo = async () => {
+    alert("Hola");
+  };
+  /*
   const getFeo = async (id) => {
-    const feosColeccion = collection(bd, "feos");
-    const refFeo = doc(feosColeccion, id);
+    const feosColeccion = await collection(bd, "feos");
+    const refFeo = await doc(feosColeccion, id);
     // Se obtiene el documento de la colección.
     const docFeo = await getDoc(refFeo);
+    console.log(docFeo.data());
     // Añado la información al estado del componente.
-    setFeos(docFeo.data());
+    setFeo(docFeo.data());
+    console.log(feo.nombre);
   };
 
   useEffect(() => {
-    getFeo(props.id);
+    //getFeo(props.id);
   }, []);
-
+  */
   return (
     <React.Fragment>
       <Formulario
         modo="editar"
         funcion={() => {
-          alert("Hola");
+          actualizarFeo();
         }}
-        nombre={feos.nombre}
-        apellidos={feos.apellidos}
-        aficiones={feos.aficiones}
-        primero={feos.vicios.primero}
-        segundo={feos.vicios.segundo}
-        tercero={feos.vicios.tercero}
+        nombre={props.datos.nombre}
+        apellidos={props.datos.apellidos}
+        aficiones={props.datos.aficiones}
+        primero={props.datos.vicios.primero}
+        segundo={props.datos.vicios.segundo}
+        tercero={props.datos.vicios.tercero}
       />
     </React.Fragment>
   );

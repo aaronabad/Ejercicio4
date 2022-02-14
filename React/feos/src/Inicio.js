@@ -12,32 +12,21 @@ import Formulario from "./Componentes/Firebase/Formulario";
 import Insertar from "./Componentes/Firebase/Insertar";
 import Actualizar from "./Componentes/Firebase/Actualizar";
 import Menu from "./Componentes/Menu";
+import Centro from "./Componentes/Esquema/Centro";
+import Feos from "./Componentes/Firebase/Feos";
 
 function Inicio() {
-  /*
-    Es posible pasar funciones como parámetros utilizando funciones flecha. 
-    Para ello es necesario declararlas antes.
-  */
-  const hola = (saludado) => {
-    alert(`Hola ${saludado}`);
-  };
   return (
     <React.Fragment>
       <div className="inicio">
         <Cabecera>Esto es la cabecera</Cabecera>
         <Contenedor>
-          <Izquierda>
-            <Eventos />
-            <Insertar />
-            <Menu />
-          </Izquierda>
+          <Izquierda></Izquierda>
           <Derecha>
-            <Consultar />
+            <Feos />
           </Derecha>
         </Contenedor>
-        <Pie>
-          <EventosII />
-        </Pie>
+        <Pie>Esto es el pie de página</Pie>
       </div>
     </React.Fragment>
   );

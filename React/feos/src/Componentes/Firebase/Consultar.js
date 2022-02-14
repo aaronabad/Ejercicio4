@@ -30,11 +30,11 @@ const Consultar = () => {
         feos.map((d) => {
           return (
             <Feo
+              key={d.id}
               id={d.id}
               nombre={d.data().nombre}
               apellidos={d.data().apellidos}
               aficiones={d.data().aficiones}
-              vicios={d.data().vicios}
             />
           );
         })}

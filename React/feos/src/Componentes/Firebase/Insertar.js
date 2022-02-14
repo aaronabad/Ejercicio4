@@ -22,11 +22,6 @@ const Insertar = () => {
       nombre: f["nombre"].value,
       apellidos: f["apellidos"].value,
       aficiones: arrayUnion(f["aficiones"].value),
-      vicios: {
-        primero: f["primero"].value,
-        segundo: f["segundo"].value,
-        tercero: f["tercero"].value,
-      },
     };
 
     const feosColeccion = collection(bd, "feos");
@@ -37,8 +32,9 @@ const Insertar = () => {
   return (
     <Formulario
       modo="nuevo"
-      funcion={() => {
-        guardarFeo();
+      funcion={async () => {
+        await guardarFeo();
+        document.getElementById("formulario").reset();
       }}
     />
   );

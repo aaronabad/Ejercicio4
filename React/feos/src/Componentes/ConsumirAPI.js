@@ -4,9 +4,7 @@ import Cargando from "./Cargando";
 
 const ConsumirAPI = (props) => {
   const url = "http://swapi.py4e.com/api/films";
-  //const url = "https://jsonplaceholder.typicode.com/todos";
   //const url = "https://swapi.dev/api/films";
-  //const url = "https://www.cheapshark.com/api/1.0/stores";
 
   const [peliculas, setPeliculas] = useState([]);
 
