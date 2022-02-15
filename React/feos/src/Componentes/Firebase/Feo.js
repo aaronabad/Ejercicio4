@@ -1,7 +1,4 @@
 import React, { PureComponent } from "react";
-import ReactDOM from "react-dom";
-import Eliminar from "./Eliminar";
-import Actualizar from "./Actualizar";
 
 const Feo = (props) => {
   return (

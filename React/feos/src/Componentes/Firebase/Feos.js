@@ -26,7 +26,7 @@ const Feos = () => {
   //*********************************************************************** */
   // Función que muestra los feos existentes en la colección.
   //*********************************************************************** */
-  const getFeos = () => {
+  const obtenerFeos = () => {
     // Se crea un monitor hacia la colección de documentos "feos"
     onSnapshot(collection(bd, "feos"), (respuesta) => {
       // En cada cambio de estado de esa colección se modifica el estado del componente.
@@ -41,14 +41,34 @@ const Feos = () => {
     if (
       window.confirm(`¿Estás seguro de querer eliminar al feo con id ${id} ?`)
     ) {
-      //await deleteDoc(doc(bd, "feos", id));
+      await deleteDoc(doc(bd, "feos", id));
       console.log(`${id} eliminado correctamente.`);
     }
   };
 
+  //*********************************************************************** */
+  // Función para guardar/actualizar la información en Firestore.
+  //*********************************************************************** */
+  // Se le pasará a través de props al objeto <Formulario /> para la gestión de los datos
+  // de ese modo se puede modificar el estado de este componente (idActualizar) desde
+  // el componente descendiente.
+  const guardarValores = async (datos) => {
+    if (idActualizar === "") {
+      const feoGuardado = await addDoc(collection(bd, "feos"), datos);
+      console.log(`Feo guardado con el id ${feoGuardado.id}`);
+    } else {
+      const feo = await updateDoc(
+        doc(collection(bd, "feos"), idActualizar),
+        datos
+      );
+      console.log(`Feo actualizado correctamente.`);
+      setIdActualizar("");
+    }
+  };
+
   useEffect(() => {
-    // Ejecuto la función getFeos() después de la creación del componente.
-    getFeos();
+    // Se ejecuta la función getFeos() después de la creación del componente.
+    obtenerFeos();
   }, []);
 
   //  Operador && -> condición && expresión
@@ -58,9 +78,9 @@ const Feos = () => {
 
   return (
     <React.Fragment>
-      {/* Si cambia el estado de idActualizar, se redibuja el componente <Formulario />,
-          por eso está ligado a un estado. */}
-      <Formulario id={idActualizar} />
+      {/* Si cambia el estado de idActualizar, se redibuja el componente <Formulario />, por eso está ligado a un estado. */}
+      {/* Se pasa la función guardarValores a <Formulario /> para poder modificar en estado de <Feos />. */}
+      <Formulario id={idActualizar} guardarValores={guardarValores} />
       {/* Cada vez que se modifique el estado se actualizará el componente. */}
       {feos &&
         feos.map((d) => {

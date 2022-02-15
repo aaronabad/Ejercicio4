@@ -34,29 +34,36 @@ const Formulario = (props) => {
     //    -> copia los valores preexistentes en el objeto valores,
     //    -> y añade las modificaciones en el input que lanza el evento.
     setValores({ ...valores, [id]: value });
-    console.log(valores);
+    //console.log(valores);
   };
 
   //*********************************************************************** */
-  // Función para guardar la información en Firestore.
+  // Función para obtener un documento de la base de datos.
   //*********************************************************************** */
-  const guardarValores = async () => {
-    const feoGuardado = await addDoc(collection(bd, "feos"), valores);
-    console.log(`Feo guardado con el id ${feoGuardado.id}`);
+  const obtenerValores = async (id) => {
+    const feo = await getDoc(doc(collection(bd, "feos"), id));
+    //console.log(feo.data());
+    setValores({ ...feo.data() });
+  };
+
+  //*********************************************************************** */
+  // Función del evento onClick para trabajar con Firestore.
+  //*********************************************************************** */
+  const modificar = async () => {
+    // Se ejecuta la función del componente ascendente (pasada como propiedad)
+    // con los valores del formulario de este componente.
+    props.guardarValores(valores);
     setValores({ ...valoresIniciales });
     // Copia el objeto inicial vacío.
     // El efecto es el mismo que -> document.getElementById("formulario").reset();
     // pero trabajando con el estado del componente al estilo React.
   };
 
-  const actualizarValores = async () => {};
-
   useEffect(() => {
     if (props.id === "") {
       setValores({ ...valoresIniciales });
     } else {
-      console.log("editando...");
-      console.log(props.id);
+      obtenerValores(props.id);
     }
   }, [props.id]);
 
@@ -85,7 +92,7 @@ const Formulario = (props) => {
           <input
             id="aficiones"
             type="text"
-            placeholder="Aficiones en comalista"
+            placeholder="Lista de aficiones"
             value={valores.aficiones}
             onChange={cambioValores}
           />
@@ -93,8 +100,8 @@ const Formulario = (props) => {
           <input
             type="button"
             id="boton"
-            onClick={guardarValores}
-            value={props.modo == "editar" ? "Editar" : "Crear nuevo"}
+            onClick={modificar}
+            value={props.id ? "Editar" : "Crear nuevo"}
           />
         </form>
       </div>

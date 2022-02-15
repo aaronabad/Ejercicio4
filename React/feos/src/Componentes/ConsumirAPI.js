@@ -17,7 +17,7 @@ const ConsumirAPI = (props) => {
     console.log(peliculas);
   };
 
-  //getInfo();
+  //getInfo(); Nunca hacerlo de esta forma.
 
   useEffect(() => {
     getInfo();
