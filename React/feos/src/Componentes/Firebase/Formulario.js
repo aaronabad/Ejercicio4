@@ -49,7 +49,7 @@ const Formulario = (props) => {
   //*********************************************************************** */
   // Función del evento onClick para trabajar con Firestore.
   //*********************************************************************** */
-  const modificar = async () => {
+  const modificar = () => {
     // Se ejecuta la función del componente ascendente (pasada como propiedad)
     // con los valores del formulario de este componente.
     props.guardarValores(valores);
