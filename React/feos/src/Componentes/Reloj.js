@@ -1,19 +1,18 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 
 function Reloj() {
-    const [hora, setHora] = useState(new Date().toLocaleString('es-ES'));
+  const [hora, setHora] = useState(new Date().toLocaleString("es-ES"));
 
-    useEffect(()=>{
-        const intervalo = setInterval(()=>{
-            console.log(`Estoy mostrando la hora ${hora}`);
-            setHora(new Date().toLocaleString('es-ES'));
-        },1000);
-  
-        return () => clearInterval(intervalo);
+  useEffect(() => {
+    const intervalo = setInterval(() => {
+      console.log(`Estoy mostrando la hora ${hora}`);
+      setHora(new Date().toLocaleString("es-ES"));
+    }, 100);
 
-    },[hora]);
+    return () => clearInterval(intervalo);
+  }, [hora]);
 
-    return ( <h2>{hora}</h2> );
+  return <h2>{hora}</h2>;
 }
 
 export default Reloj;
