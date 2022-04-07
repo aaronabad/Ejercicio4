@@ -21,7 +21,7 @@ function Header() {
     <React.Fragment>
       <div className="header">
         <p className="logo">
-          Notas App {activeTab} - {location.pathname}
+          Notas App React {activeTab} - {location.pathname}
         </p>
         <div className="header-right">
           <Link to="/">
