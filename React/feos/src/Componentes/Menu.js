@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Formulario from "./Firebase/Formulario";
-import Consultar from "./Firebase/Consultar";
+//import Consultar from "./Firebase/Consultar";
 import MenuElemento from "./MenuElemento";
 
 const Menu = () => {
