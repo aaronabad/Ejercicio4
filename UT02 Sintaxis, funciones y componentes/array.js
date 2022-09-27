@@ -10,19 +10,19 @@ let persona = {
 
 /** Copia de objeto (no referencia). */
 
-//let persona2 = { ...persona, apellido2: "De la buena" };
+let persona2 = { ...persona, apellido2: "De la buena" };
 
 /** Copia por refencia. */
 
-//let persona3 = persona;
+let persona3 = persona;
 
 /** Se modifica persona3 y no persona (al menos directamente). */
 
-//persona3.ciudad = "Petrer";
+persona3.ciudad = "Petrer";
 
-/* console.log(persona);
+console.log(persona);
 console.log(persona2);
-console.log(persona3); */
+console.log(persona3);
 
 /*****  Arrays. */
 
