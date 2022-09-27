@@ -28,10 +28,10 @@ console.log(persona3);
 
 /** Declaración.  */
 
-/* let cosas = new Array();
+let cosas = new Array();
 let tresTipos = new Array(11, "Feo", true);
 let tresTiposDos = [11, "hola", true];
-let masCosas = []; */
+let masCosas = [];
 
 /** Spread también funciona con arrays. */
 
