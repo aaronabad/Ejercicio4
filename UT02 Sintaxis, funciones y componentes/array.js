@@ -108,8 +108,8 @@ let apellido1 = persona.apellido1;
 
 /** Funciona con arrays aunque de forma posicional. */
 
-/* let sorpresa = ["Luke", "yo", "soy", "tu", "padre"];
+let sorpresa = ["Luke", "yo", "soy", "tu", "padre"];
 let [sustantivo, pronombre, verbo] = sorpresa;
 console.log(sustantivo);
 console.log(pronombre);
-console.log(verbo); */
+console.log(verbo);
