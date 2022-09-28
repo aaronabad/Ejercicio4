@@ -35,10 +35,10 @@ let masCosas = [];
 
 /** Spread también funciona con arrays. */
 
-/* let animales = ["perro", "gato", "feo"];
+let animales = ["perro", "gato", "feo"];
 console.log(animales);
 let copiaDeAnimales = [...animales];
-console.log(copiaDeAnimales);*/
+console.log(copiaDeAnimales);
 
 /** 
             ¡¡Cuidado!!
