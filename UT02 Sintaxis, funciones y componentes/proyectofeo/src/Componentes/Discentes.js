@@ -2,7 +2,7 @@ import React from "react";
 import Discente from "./Discente.js";
 
 function Discentes() {
-  /*  const discentes = [
+  const discentes = [
     {
       id: 1,
       nombre: "Feo",
@@ -24,7 +24,7 @@ function Discentes() {
       curso: "2DAW",
       modulos: "DWC",
     },
-  ]; */
+  ];
 
   return (
     <React.Fragment>
@@ -39,7 +39,7 @@ function Discentes() {
       {/* <Discente nombre="Federico" apellidos="Martínez Rodríguez" curso="2DAW">
         DWC, DWS
       </Discente> */}
-      {/* <div>
+      <div>
         {discentes.map((v) => {
           return (
             <Discente
@@ -52,7 +52,7 @@ function Discentes() {
             </Discente>
           );
         })}
-      </div> */}
+      </div>
     </React.Fragment>
   );
 }

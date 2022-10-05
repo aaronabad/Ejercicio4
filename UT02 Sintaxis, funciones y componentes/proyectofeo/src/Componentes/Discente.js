@@ -4,14 +4,19 @@ function Discente(props) {
   return (
     <React.Fragment>
       <p>
-        <p>Apellidos, Nombre</p>
+        {/* <p>Apellidos, Nombre</p>
         <p>Curso matrícula</p>
-        <p>Módulos matrícula</p>
+        <p>Módulos matrícula</p> */}
         {/*  <p>
-          {props.apellidos}, {props.nombre}
+          {props.datos.apellidos}, {props.datos.nombre}
         </p>
-        <p>{props.curso}</p>
-        <p>{props.modulos}</p> */}
+        <p>{props.datos.curso}</p>
+        <p>{props.datos.modulos}</p> */}
+        <p>
+          {props.datos.apellidos}, {props.datos.nombre}
+        </p>
+        <p>{props.datos.curso}</p>
+        <p>{props.datos.modulos}</p>
         {/* <p>
           {props.apellidos}, {props.nombre}
         </p>
