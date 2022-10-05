@@ -7,16 +7,16 @@ function Discente(props) {
         {/* <p>Apellidos, Nombre</p>
         <p>Curso matrícula</p>
         <p>Módulos matrícula</p> */}
-        {/*  <p>
-          {props.datos.apellidos}, {props.datos.nombre}
-        </p>
-        <p>{props.datos.curso}</p>
-        <p>{props.datos.modulos}</p> */}
         <p>
           {props.datos.apellidos}, {props.datos.nombre}
         </p>
         <p>{props.datos.curso}</p>
         <p>{props.datos.modulos}</p>
+        {/* <p>
+          {props.datos.apellidos}, {props.datos.nombre}
+        </p>
+        <p>{props.datos.curso}</p>
+        <p>{props.datos.modulos}</p> */}
         {/* <p>
           {props.apellidos}, {props.nombre}
         </p>
